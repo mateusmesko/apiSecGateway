@@ -64,18 +64,31 @@ Database
 # Estrutura do Projeto
 
 ```text
-src/main/java/br/com/mesko
+API Gateway
 │
-├── controller
-│   └── HeartController.java
-│
-├── service
+├── Main
 │
 ├── config
+│   ├── AppConfig
+│   ├── RunMode
+│   └── TypeRun
+│
+├── startup
+│   └── StartupListener
+│
+├── filter
+│   └── RequestTrackingFilter (em construção)
 │
 ├── model
+│   └── RequestInfo (em construção)
 │
-└── Main.java
+├── service
+│   └── RequestAuditService (em construção)
+│
+└── test
+    ├── MainTest
+    ├── RunModeTest
+    └── AppConfigTest
 ```
 
 ---
