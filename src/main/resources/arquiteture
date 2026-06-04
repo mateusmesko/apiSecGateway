@@ -1,0 +1,25 @@
+API Gateway
+│
+├── Main
+│
+├── config
+│   ├── AppConfig
+│   ├── RunMode
+│   └── TypeRun
+│
+├── startup
+│   └── StartupListener
+│
+├── filter
+│   └── RequestTrackingFilter (em construção)
+│
+├── model
+│   └── RequestInfo (em construção)
+│
+├── service
+│   └── RequestAuditService (em construção)
+│
+└── test
+    ├── MainTest
+    ├── RunModeTest
+    └── AppConfigTest
