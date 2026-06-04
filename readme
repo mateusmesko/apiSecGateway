@@ -1,1 +1,396 @@
-teste
+# API Gateway
+
+API Gateway desenvolvido utilizando Java 21 e Spring Boot.
+
+O objetivo deste projeto é atuar como ponto central de entrada para uma arquitetura baseada em microsserviços, centralizando funcionalidades como:
+
+- Roteamento de requisições
+- Autenticação
+- Autorização
+- Auditoria
+- Observabilidade
+- Rate Limiting
+- Service Discovery
+- Integração entre serviços
+
+---
+
+# Arquitetura Inicial
+
+Atualmente o projeto encontra-se em sua fase inicial.
+
+```text
+Cliente
+   |
+   v
+API Gateway
+   |
+   v
+Heart Controller
+```
+
+No futuro:
+
+```text
+Cliente
+   |
+   v
+API Gateway
+   |
+   +------------------+
+   |                  |
+   v                  v
+User Service     Product Service
+   |
+   v
+Database
+```
+
+---
+
+# Tecnologias Utilizadas
+
+| Tecnologia | Versão |
+|------------|---------|
+| Java | 21 |
+| Spring Boot | 3.x |
+| Maven | 3.x |
+| JUnit | 5 |
+| JaCoCo | Última |
+| Spring Cloud | Futuro |
+
+---
+
+# Estrutura do Projeto
+
+```text
+src/main/java/br/com/mesko
+│
+├── controller
+│   └── HeartController.java
+│
+├── service
+│
+├── config
+│
+├── model
+│
+└── Main.java
+```
+
+---
+
+# Inicialização da Aplicação
+
+Classe principal:
+
+```java
+@SpringBootApplication
+public class Main {
+
+    public static void main(String[] args) {
+        SpringApplication.run(Main.class, args);
+    }
+
+}
+```
+
+A anotação `@SpringBootApplication` informa ao Spring Boot que esta é a classe principal da aplicação.
+
+O método:
+
+```java
+SpringApplication.run(Main.class, args);
+```
+
+é responsável por:
+
+- Inicializar o contexto Spring
+- Carregar configurações
+- Registrar componentes
+- Disponibilizar recursos da aplicação
+
+---
+
+# Configuração da Porta
+
+Arquivo:
+
+```text
+src/main/resources/application.yml
+```
+
+Exemplo:
+
+```yaml
+server:
+  port: 8085
+```
+
+Porta padrão utilizada:
+
+```text
+8085
+```
+
+---
+
+# Endpoint de Teste
+
+Para validar o funcionamento da aplicação foi criado um endpoint simples.
+
+## Controller
+
+```java
+@RestController
+public class HeartController {
+
+    @GetMapping("/heart")
+    public String heart() {
+        return "OK";
+    }
+
+}
+```
+
+## Requisição
+
+```http
+GET /heart
+```
+
+Exemplo:
+
+```bash
+curl http://localhost:8085/heart
+```
+
+Resposta:
+
+```text
+OK
+```
+
+Status HTTP:
+
+```http
+200 OK
+```
+
+---
+
+# Executando o Projeto
+
+## Clonar repositório
+
+```bash
+git clone https://github.com/seu-usuario/api-gateway.git
+```
+
+## Entrar na pasta
+
+```bash
+cd api-gateway
+```
+
+## Executar
+
+Linux:
+
+```bash
+./mvnw spring-boot:run
+```
+
+Windows:
+
+```bash
+mvnw.cmd spring-boot:run
+```
+
+Ou:
+
+```bash
+mvn clean package
+java -jar target/api-gateway.jar
+```
+
+---
+
+# Banner Personalizado
+
+O Spring Boot permite personalizar o banner exibido durante o startup.
+
+Arquivo:
+
+```text
+src/main/resources/banner.txt
+```
+
+Exemplo:
+
+```text
+ __  __           _
+|  \/  | ___  ___| | _____
+| |\/| |/ _ \/ __| |/ / _ \
+| |  | |  __/\__ \   < (_) |
+|_|  |_|\___||___/_|\_\___/
+
+API GATEWAY 0.1.0
+```
+
+Benefícios:
+
+- Não expor detalhes desnecessários
+- Facilitar identificação da aplicação
+- Controle visual de versões
+
+---
+
+# Logs
+
+Configuração recomendada:
+
+```yaml
+spring:
+  main:
+    log-startup-info: false
+
+logging:
+  level:
+    org.springframework: ERROR
+    reactor.netty: ERROR
+```
+
+Objetivo:
+
+- Reduzir ruído no console
+- Exibir apenas erros relevantes
+- Evitar exposição excessiva de informações
+
+---
+
+# Testes
+
+Ferramentas utilizadas:
+
+- JUnit 5
+- Spring Boot Test
+- JaCoCo
+
+## Executar testes
+
+```bash
+mvn clean test
+```
+
+## Executar validação completa
+
+```bash
+mvn clean verify
+```
+
+---
+
+# Cobertura de Código
+
+O projeto utiliza JaCoCo para monitoramento de cobertura.
+
+Relatório:
+
+```text
+target/site/jacoco/index.html
+```
+
+Objetivos futuros:
+
+- 50% de cobertura mínima
+- 70% de cobertura mínima
+- 80% de cobertura mínima
+
+---
+
+# Segurança
+
+A arquitetura foi planejada para receber futuramente:
+
+- JWT
+- OAuth2
+- Spring Security
+- Rate Limiting
+- Request Tracking
+- Auditoria
+- Observabilidade
+
+---
+
+# Roadmap
+
+## Fase 1
+
+- [x] Spring Boot
+- [x] Estrutura inicial
+- [x] Controller de teste
+- [x] Configuração de porta
+- [x] Maven
+- [x] JaCoCo
+
+## Fase 2
+
+- [ ] Spring Cloud Gateway
+- [ ] Request Tracking
+- [ ] Request ID
+- [ ] Auditoria
+
+## Fase 3
+
+- [ ] User Service
+- [ ] Integração Gateway → Microsserviço
+- [ ] Configuração centralizada
+
+## Fase 4
+
+- [ ] JWT
+- [ ] Spring Security
+- [ ] Rate Limiting
+- [ ] Logs estruturados
+
+## Fase 5
+
+- [ ] Service Discovery
+- [ ] Load Balancing
+- [ ] Circuit Breaker
+- [ ] Observabilidade
+
+---
+
+# Futura Arquitetura
+
+```text
+Frontend
+    |
+    v
+API Gateway
+    |
+    +-------------------+
+    |                   |
+    v                   v
+User Service      Product Service
+    |                   |
+    v                   v
+PostgreSQL        PostgreSQL
+```
+
+---
+
+# Autor
+
+Desenvolvido por Mesko.
+
+Projeto de estudo focado em:
+
+- Backend Java
+- Spring Boot
+- Spring Cloud
+- Microsserviços
+- Arquiteturas escaláveis
+- Cybersecurity
