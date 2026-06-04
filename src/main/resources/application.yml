@@ -1,0 +1,22 @@
+server:
+  port: 8085
+
+app:
+  type-run: DEV
+
+spring:
+  logging:
+    enabled: false
+  cloud:
+    gateway:
+      routes:
+        - id: heart
+          uri: http://localhost:8081
+          predicates:
+            - Path=/api/*
+
+logging:
+  level:
+    org.springframework: ERROR
+    reactor.netty: ERROR
+    br.com.mesko: INFO
