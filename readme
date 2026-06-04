@@ -56,7 +56,7 @@ Database
 | Spring Boot | 3.x |
 | Maven | 3.x |
 | JUnit | 5 |
-| JaCoCo | Última |
+| JaCoCo | 0.8.13 |
 | Spring Cloud | Futuro |
 
 ---
