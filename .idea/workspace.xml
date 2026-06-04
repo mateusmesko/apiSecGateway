@@ -4,31 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="178a8fbe-210d-4b88-b192-1f9d12c8ebd0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/mesko/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/mesko/config/AppConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/mesko/config/RunMode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/mesko/controller/HealthController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/mesko/enums/TypeRun.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/mesko/filter/RequestTrackingFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/mesko/model/RequestInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/mesko/service/RequestAuditService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/mesko/startup/StartupListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/arquiteture" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/banner.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/br/com/mesko/MainTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/br/com/mesko/config/AppConfigTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/br/com/mesko/config/RunModeTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/br/com/mesko/controller/HealthControllerTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="178a8fbe-210d-4b88-b192-1f9d12c8ebd0" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,17 +18,35 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/mateusmesko/apiSecGateway",
-    "accountId": "0afaf4a0-b962-4575-910b-b2d2e09e5d58"
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "mateusmesko"
   }
 }]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/mateusmesko/apiSecGateway&quot;,
+    &quot;accountId&quot;: &quot;0afaf4a0-b962-4575-910b-b2d2e09e5d58&quot;
+  }
+}</component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="jdkForImporter" value="ms-21" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="3Eg96Tn7SCiZqN5JJX90TMRNYCG" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -76,7 +70,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Spring Boot.Main.executor": "Run",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "apiGatewayV0__1__0",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -211,5 +205,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="v0.1.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="v0.1.0" />
   </component>
 </project>
