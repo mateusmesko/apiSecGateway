@@ -5,18 +5,36 @@ app:
   type-run: DEV
 
 spring:
-  logging:
-    enabled: false
   cloud:
     gateway:
+      globalcors:
+        add-to-simple-url-handler-mapping: true
+        cors-configurations:
+          '[/**]':
+            allowedOriginPatterns:
+              - "*"
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - PATCH
+              - DELETE
+              - OPTIONS
+            allowedHeaders:
+              - "*"
+
       routes:
-        - id: heart
+        - id: user-service
           uri: http://localhost:8081
           predicates:
-            - Path=/api/*
+            - Path=/auth/**
 
 logging:
   level:
     org.springframework: ERROR
     reactor.netty: ERROR
     br.com.mesko: INFO
+
+jwt:
+  secret: 1234567890123456789012345678901234567890
+  expiration: 3600000

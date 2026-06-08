@@ -1,12 +1,16 @@
 package br.com.mesko;
 
 import br.com.mesko.config.AppConfig;
+import br.com.mesko.config.JwtProperties;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 
 @SpringBootApplication
-@EnableConfigurationProperties(AppConfig.class)
+@EnableConfigurationProperties({
+        JwtProperties.class,
+        AppConfig.class
+})
 public class Main {
 
     public static void main(String[] args) {

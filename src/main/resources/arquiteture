@@ -4,9 +4,9 @@ API Gateway
 │
 ├── config
 │   ├── AppConfig
-│   ├── RunMode
+│   └── RunMode
+├── enums
 │   └── TypeRun
-│
 ├── startup
 │   └── StartupListener
 │

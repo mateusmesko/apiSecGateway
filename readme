@@ -336,16 +336,16 @@ A arquitetura foi planejada para receber futuramente:
 
 ## Fase 2
 
-- [ ] Spring Cloud Gateway
-- [ ] Request Tracking
-- [ ] Request ID
-- [ ] Auditoria
+- [x] Spring Cloud Gateway
+- [x] Request Tracking
+- [x] Request ID
+- [x] Auditoria
 
 ## Fase 3
 
-- [ ] User Service
-- [ ] Integração Gateway → Microsserviço
-- [ ] Configuração centralizada
+- [x] User Service
+- [x] Integração Gateway → Microsserviço
+- [x] Configuração centralizada
 
 ## Fase 4
 
