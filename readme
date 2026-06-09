@@ -1,5 +1,8 @@
 # API Gateway
 
+# Para sistema de usuario configurado em repositorio
+https://github.com/mateusmesko/apiSecGateway
+
 API Gateway desenvolvido utilizando Java 21 e Spring Boot.
 
 O objetivo deste projeto é atuar como ponto central de entrada para uma arquitetura baseada em microsserviços, centralizando funcionalidades como:
